@@ -1,5 +1,6 @@
 require "thor"
 require_relative "labeler"
+require_relative "vulnerability_alerts"
 
 class LabelerCLI < Thor
   def self.exit_on_failure?
@@ -31,6 +32,11 @@ class LabelerCLI < Thor
   desc "delete_label [org/repository,org/repository] label", "delete the label from the repo"
   def delete_label(repos, label)
     puts Labeler.new.delete_label(repos.split(","), label)
+  end
+
+  desc "report_security", "list all vulnerability alerts by repository"
+  def report_security
+    puts VulnerabilityAlerts.new.report_security
   end
 end
 

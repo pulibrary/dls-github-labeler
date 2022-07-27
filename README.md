@@ -35,6 +35,11 @@ To delete a label from all of the DLS repositories, do:
 $ bin/labeler delete_label pulibrary/figgy,pulibrary/dpul,pulibrary/pulmap,pulibrary/pulfalight,pulibrary/lae-blacklight [label]
 ```
 
+To print a preliminary security / dependabot alert that covers a small list of hard-coded PUL projects:
+```
+$ bin/labeler report_security
+```
+
 # Reference
 * Code uses the [Octokit Client](https://octokit.github.io/octokit.rb/Octokit/Client/Labels.html)
 * Styleguide originated from the [Drupal labels style guide](https://github.com/pulibrary/pul_library_drupal/wiki/Issues-Label-Style-Guide)
